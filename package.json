@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/inoy/udemy_typescript-for-javascript-developers#readme",
   "devDependencies": {
+    "@types/node": "^15.12.2",
+    "ts-node": "^10.0.0",
     "typescript": "^4.3.2"
   }
 }
