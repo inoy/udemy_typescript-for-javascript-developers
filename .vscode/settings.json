@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
-    "respawn"
+    "respawn",
+    "typescriptlang"
   ],
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }

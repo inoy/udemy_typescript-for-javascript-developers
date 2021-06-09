@@ -7,3 +7,7 @@
 ## VS Code が使用する TypeScript を指定
 
 vscode で ts ファイルを開いて右下のバージョン表示部分をクリック、Select TypeScript Version...をクリック、Use Workspace Version をクリックで OK。
+
+## tuple 型
+
+[typescriptlang.org - playground - tuple](https://www.typescriptlang.org/ja/play#example/tuples)
