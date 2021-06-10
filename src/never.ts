@@ -14,6 +14,8 @@ try {
 }
 
 const foo: void = undefined;
+// Type 'undefined' is not assignable to type 'never'.ts(2322)
 // const bar: never = undefined;
+// Type 'null' is not assignable to type 'never'.ts(2322)
 // const bar: never = null;
 const bar: never = error('only me');
