@@ -33,3 +33,21 @@ const foo: void = undefined;
 // const bar: never = null;
 const bar: never = error('only me');
 ```
+
+## 型エイリアス（Type Alias）
+
+### typeof で既存オブジェクトから type を生成
+
+```ts
+const example1 = {
+  name: 'Ham',
+  age: 43,
+};
+
+type Profile2 = typeof example1;
+// Profile2は以下の型定義となる
+// type Profile2 = {
+//   name: string;
+//   age: number;
+// }
+```
