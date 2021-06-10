@@ -51,3 +51,12 @@ type Profile2 = typeof example1;
 //   age: number;
 // }
 ```
+
+## type vs interface
+
+interface を基本的には使用しているとの[回答](https://hitachi-solutionsjp.udemy.com/course/ts-for-js-developers/learn/lecture/17812414#questions/9466876)。
+
+> 非常に議論を呼ぶもので、端的に回答するのは非常に難しい
+
+> 僕個人の方針は、 interface を default で使用
+> interface にはマージ機能というのがあって、これを使えば既存の型を拡張することができ便利
