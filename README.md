@@ -11,3 +11,25 @@ vscode で ts ファイルを開いて右下のバージョン表示部分をク
 ## tuple 型
 
 [typescriptlang.org - playground - tuple](https://www.typescriptlang.org/ja/play#example/tuples)
+
+## never 型
+
+呼び元に戻ってこないことを示す型。
+
+```ts
+const error = (message: string): never => {
+  throw new Error(message);
+};
+```
+
+### void 型と never 型の違い
+
+void 型は呼び元に戻ってくる。  
+never 型は呼び元に戻ってこない。
+
+```ts
+const foo: void = undefined;
+// const bar: never = undefined;
+// const bar: never = null;
+const bar: never = error('only me');
+```
