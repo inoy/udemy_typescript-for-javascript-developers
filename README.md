@@ -60,3 +60,51 @@ interface を基本的には使用しているとの[回答](https://hitachi-sol
 
 > 僕個人の方針は、 interface を default で使用
 > interface にはマージ機能というのがあって、これを使えば既存の型を拡張することができ便利
+
+## オーバーロード
+
+### function
+
+```ts
+function double(value: number): number;
+function double(value: string): string;
+
+function double(value: any): any {
+  console.log(typeof value);
+  switch (typeof value) {
+    case 'number':
+      return value * 2;
+    case 'string':
+      return value + value;
+    // number,string 以外の指定は不可のため定義しない。
+    // default:
+    //   throw 'numberでもstringでもないので、引数の型を確認してください。';
+  }
+}
+console.log(double(100));
+console.log(double('Go '));
+```
+
+### arrow
+
+```ts
+type Triple = {
+  (value: number): number;
+  (value: string): string;
+};
+
+const triple: Triple = (value: any): any => {
+  console.log(typeof value);
+  switch (typeof value) {
+    case 'number':
+      return value * 3;
+    case 'string':
+      return value + value + value;
+    // number,string 以外の指定は不可のため定義しない。
+    // default:
+    //   throw 'numberでもstringでもないので、引数の型を確認してください。';
+  }
+};
+console.log(triple(100));
+console.log(triple('Go '));
+```
